@@ -4,6 +4,7 @@ A Romanian‑culture multiple‑choice benchmark: **1,355 four‑option question
 
 Models are prompted to answer as a native Romanian speaker, replying with a single letter (A–D).
 
+
 ## Data
 
 `rocult_unified_answers.json` — one object per question:
@@ -20,7 +21,12 @@ Models are prompted to answer as a native Romanian speaker, replying with a sing
 }
 ```
 
-`estimates.xlsx` / `estimates_22.csv` — per‑model accuracy (overall + per‑category, micro & macro).
+`estimates.xlsx`  — per‑model accuracy (overall + per‑category, micro + Confidence Intervals).
+
+
+The repository also includes a filtered version of the dataset containing 1,027 questions, available in filtering > `rocult_classification.json`.
+The questions were evaluated by three closed-source models: Gemini, GPT, and Claude.
+Valid questions are identified by the class_binary_majority field being set to True.
 
 ## Scripts
 
